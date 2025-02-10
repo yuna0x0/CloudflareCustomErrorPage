@@ -1,11 +1,11 @@
 {
-  "name": "cloudflarecustomerrorpage",
+  "name": "cloudflare-custom-pages",
   "version": "0.0.1",
   "description": "Lightweight custom error page written for Cloudflare.",
   "main": "app.js",
   "repository": {
 		"type": "git",
-		"url": "git+https://github.com/yuna0x0/CloudflareCustomErrorPage.git"
+		"url": "git+https://github.com/yuna0x0/cloudflare-custom-pages.git"
 	},
   "contributors": [
     "186526 <i@186526.xyz>",

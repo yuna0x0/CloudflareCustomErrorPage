@@ -241,7 +241,7 @@ exports.builderConfig = [
 
 exports.i18n = {
   client: "Your Client",
-  edgeNetwork: "Cloudflare Edge Network",
+  edgeNetwork: "Cloudflare",
   webServer: "Web Server",
   provider:
     "This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> if you need help.",

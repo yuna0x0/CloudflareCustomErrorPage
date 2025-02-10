@@ -1,7 +1,7 @@
 <status>
     <% if (config.card.client) { %>
         <card class="<%= config.card.client.color %>-card" id="client-status-card">
-            <icon class="material-icons-outlined <%= config.card.client.color %>-text">web_assets</icon>
+            <icon class="material-icons-outlined <%= config.card.client.color %>-text" style="position: relative;">web_assets</icon>
             <main><%= i18n.client %></main>
             <status-text class="<%= config.card.client.color %>-text"><%= config.card.client.status %></status-text>
         </card>
@@ -9,7 +9,11 @@
 
     <% if (config.card.edgeNetwork) { %>
         <card class="<%= config.card.edgeNetwork.color %>-card" id="client-status-card">
-            <icon class="material-icons-outlined <%= config.card.edgeNetwork.color %>-text">cloud</icon>
+            <icon class="material-icons-outlined <%= config.card.edgeNetwork.color %>-text" style="position: relative;">cloud
+                <% if (config.card.edgeNetwork.color === 'red') { %>
+                    <span class="material-icons-outlined error-icon">error</span>
+                <% } %>
+            </icon>
             <% if (config.card.edgeNetwork.color == 'gray') { %>
                 <main class="gray-text"><%= i18n.edgeNetwork %></main>
             <% } else { %>
@@ -21,7 +25,11 @@
 
     <% if (config.card.webServer) { %>
         <card class="<%= config.card.webServer.color %>-card" id="client-status-card">
-            <icon class="material-icons-outlined <%= config.card.webServer.color %>-text">dns</icon>
+            <icon class="material-icons-outlined <%= config.card.webServer.color %>-text" style="position: relative;">dns
+                <% if (config.card.webServer.color === 'red') { %>
+                    <span class="material-icons-outlined error-icon">error</span>
+                <% } %>
+            </icon>
             <% if (config.card.webServer.color == 'gray') { %>
                 <main class="gray-text"><%= i18n.webServer %></main>
             <% } else { %>

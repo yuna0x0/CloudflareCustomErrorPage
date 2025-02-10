@@ -52,7 +52,9 @@ status {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }  
 }
 
 status > card {
@@ -148,10 +150,7 @@ reason main {
   display: block;
 }
 
-@media screen and (max-width: 480px) {
-  body {
-    margin: 6rem 2rem;
-  }
+@media screen and (max-width: 768px) {
   :root {
     --font-size-main: 3rem;
     --font-size-description: 1.045rem;
@@ -171,10 +170,6 @@ reason main {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    margin: 8% 10%;
-  }
-
   header > * {
     display: inline-block;
     margin-left: 1%;
@@ -209,4 +204,22 @@ reason main {
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  margin-top: 75px;
+  @media (max-width: 1024px) {
+    margin-top: 50px;
+  }
+}
+
+.error-icon {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  font-size: 24px;
+  background: var(--error-color-background);
+  border-radius: 50%;
 }

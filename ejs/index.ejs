@@ -3,56 +3,57 @@
 
 <%- include('lib/head'); %>
 <body>
-    <% if (config.statusCode) { %>
-        <header>
-            <main>
-                <%= config.statusCode %>
-            </main>
-            <description>
+    <div class="container">
+        <% if (config.statusCode) { %>
+            <header>
+                <main>
+                    <%= config.statusCode %>
+                </main>
+                <description>
+                    <%= config.text %>
+                </description>
+            </header>
+        <% } else if (config.text) { %>
+            <h1>
                 <%= config.text %>
-            </description>
-        </header>
-    <% } else if (config.text) { %>
-        <h1>
-            <%= config.text %>
-        </h1>
-    <% } %>
+            </h1>
+        <% } %>
 
-    <% if (config.fileName == 'challenge.html') { %>
-        ::CAPTCHA_BOX::
-    <% } %>
+        <% if (config.fileName == 'challenge.html') { %>
+            ::CAPTCHA_BOX::
+        <% } %>
 
-    <% if (config.fileName == 'js-challenge.html') { %>
-        ::IM_UNDER_ATTACK_BOX::
-    <% } %>
+        <% if (config.fileName == 'js-challenge.html') { %>
+            ::IM_UNDER_ATTACK_BOX::
+        <% } %>
 
-    <% if (config.card) { %>
-        <%- include('lib/card') -%>
+        <% if (config.card) { %>
+            <%- include('lib/card') -%>
+        <% } %>
+        <% if (config.reason) { %>
+            <%- include('lib/reason') -%>
+        <% } %>
+        <%- include('lib/waifu') -%>
+        <%- include('lib/footer') -%>
+    </div>
+
+    <% if (config.fileName == '1xxx-error.html') { %>
+        <none>
+        ::CLOUDFLARE_ERROR_1000S_BOX::
+        </none>
     <% } %>
-    <% if (config.reason) { %>
-        <%- include('lib/reason') -%>
+    
+    <% if (config.fileName == '5xx-error.html') { %>
+        <none>
+        ::CLOUDFLARE_ERROR_500S_BOX::
+        </none>
     <% } %>
-    <%- include('lib/waifu') -%>
+    
+    <% if (config.script) { %>
+        <script>
+            (<%- config.script.toString() %>)()
+        </script>
+    <% } %>
 </body>
-
-<%- include('lib/footer') -%>
-
-<% if (config.fileName == '1xxx-error.html') { %>
-    <none>
-    ::CLOUDFLARE_ERROR_1000S_BOX::
-    </none>
-<% } %>
-
-<% if (config.fileName == '5xx-error.html') { %>
-    <none>
-    ::CLOUDFLARE_ERROR_500S_BOX::
-    </none>
-<% } %>
-
-<% if (config.script) { %>
-    <script>
-        (<%- config.script.toString() %>)()
-    </script>
-<% } %>
 
 </html>

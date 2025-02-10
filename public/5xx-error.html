@@ -16,26 +16,27 @@
 </head>
 
 <body>
-    
-        <header>
-            <main>
-                5xx
-            </main>
-            <description>
-                Server-side Error
-            </description>
-        </header>
-    
+    <div class="container">
+        
+            <header>
+                <main>
+                    5xx
+                </main>
+                <description>
+                    Server-side Error
+                </description>
+            </header>
+        
 
-    
+        
 
-    
+        
 
-    
-        <status>
+        
+            <status>
     
         <card class="green-card" id="client-status-card">
-            <icon class="material-icons-outlined green-text">web_assets</icon>
+            <icon class="material-icons-outlined green-text" style="position: relative;">web_assets</icon>
             <main>Your Client</main>
             <status-text class="green-text">Working</status-text>
         </card>
@@ -43,9 +44,11 @@
 
     
         <card class="green-card" id="client-status-card">
-            <icon class="material-icons-outlined green-text">cloud</icon>
+            <icon class="material-icons-outlined green-text" style="position: relative;">cloud
+                
+            </icon>
             
-                <main>Cloudflare Edge Network</main>
+                <main>Cloudflare</main>
             
             <status-text class="green-text">Working</status-text>
         </card>
@@ -53,7 +56,11 @@
 
     
         <card class="red-card" id="client-status-card">
-            <icon class="material-icons-outlined red-text">dns</icon>
+            <icon class="material-icons-outlined red-text" style="position: relative;">dns
+                
+                    <span class="material-icons-outlined error-icon">error</span>
+                
+            </icon>
             
                 <main>Web Server</main>
             
@@ -61,9 +68,9 @@
         </card>
     
 </status>
-    
-    
-        <reason>
+        
+        
+            <reason>
     <explain>
         <main>
             What happened?
@@ -76,13 +83,11 @@
         </main>
         <p>Please try again in a few minutes.</p>
     </howtodo>
-</reason>    
-    <div class="waifu-img">
+</reason>        
+        <div class="waifu-img">
     <img src="img/neko.webp" width="200px" />
 </div>
-</body>
-
-<footer class="footer">
+        <footer class="footer">
     <provider>This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> if you need help.</provider>
     <br>
     <text>
@@ -95,18 +100,19 @@
         
     </text>
 </footer>
+    </div>
 
-
-
-
-    <none>
-    ::CLOUDFLARE_ERROR_500S_BOX::
-    </none>
-
-
-
-    <script>
-        (function () {
+    
+    
+    
+        <none>
+        ::CLOUDFLARE_ERROR_500S_BOX::
+        </none>
+    
+    
+    
+        <script>
+            (function () {
       const baseDetils = document.querySelector(".cf-error-details");
       if (!baseDetils) {
         return;
@@ -137,7 +143,8 @@
       const utcTime = new Date().toUTCString();
       document.querySelector("text").innerText += `Hit in ${POP}\n\n${utcTime}`;
     })()
-    </script>
-
+        </script>
+    
+</body>
 
 </html>

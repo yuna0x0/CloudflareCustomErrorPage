@@ -97,12 +97,8 @@ exports.builderConfig = [
     footer: [
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
-      'Hit in <code id="pop"> undefined </code>',
     ],
     script: function () {
-      const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += `\n${utcTime}`;
-
       const baseDetils = document.querySelector(".cf-error-details");
       if (!baseDetils) {
         return;
@@ -128,8 +124,10 @@ exports.builderConfig = [
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
       document.querySelector("explain p").innerText = Explain;
-      document.querySelector("text #pop").innerText = POP;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
+
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += `Cloudflare Location: ${POP}\n${utcTime}`;
     },
   },
   {
@@ -229,11 +227,13 @@ exports.builderConfig = [
   },
   {
     fileName: "challenge.html",
+    title: "Just a moment...",
     text: "Checking if the site connection is secure...",
     footer: [],
   },
   {
     fileName: "js-challenge.html",
+    title: "Just a moment...",
     text: "Checking if the site connection is secure...",
     footer: [],
   },

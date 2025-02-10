@@ -8,7 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <title>5xx | Server-side Error</title>
+    
+        <title>5xx | Server-side Error</title>
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
     <link href="/index.css" rel="stylesheet"/>
 </head>
@@ -91,9 +93,6 @@
             Ray ID is <code>::RAY_ID::</code>
             <br>
         
-            Hit in <code id="pop"> undefined </code>
-            <br>
-        
     </text>
 </footer>
 
@@ -108,9 +107,6 @@
 
     <script>
         (function () {
-      const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += `\n${utcTime}`;
-
       const baseDetils = document.querySelector(".cf-error-details");
       if (!baseDetils) {
         return;
@@ -136,8 +132,10 @@
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
       document.querySelector("explain p").innerText = Explain;
-      document.querySelector("text #pop").innerText = POP;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
+
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += `Cloudflare Location: ${POP}\n${utcTime}`;
     })()
     </script>
 

@@ -79,7 +79,7 @@ exports.builderConfig = [
     card: helper.allWorking,
     reason: {
       explain:
-        "<p>This is cloudflare-custom-pages, a lightweight custom error page written for Cloudflare that uses ejs as a template compiler. Customized for yuna0x0's infrastructure.</p>",
+        "This is cloudflare-custom-pages, a lightweight custom error page written for Cloudflare that uses ejs as a template compiler. Customized for yuna0x0's infrastructure.",
       howtodo:
         "Check the repo on <a href='https://github.com/yuna0x0/cloudflare-custom-pages'>GitHub</a>.",
     },
@@ -91,7 +91,7 @@ exports.builderConfig = [
     text: "Server-side Error",
     card: helper.ServerError,
     reason: {
-      explain: "<p>The web server reported a Server error.</p>",
+      explain: "The web server reported a Server error.",
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
@@ -123,7 +123,7 @@ exports.builderConfig = [
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain").innerHTML = `<p>${Explain}</p>`;
+      document.querySelector("explain p").innerText = Explain;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
 
       const utcTime = new Date().toUTCString();
@@ -136,7 +136,7 @@ exports.builderConfig = [
     text: "Cloudflare-side Error",
     card: helper.edgeError,
     reason: {
-      explain: "<p>Cloudflare Edge Network reported a error.</p>",
+      explain: "Cloudflare Edge Network reported a error.",
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
@@ -167,7 +167,7 @@ exports.builderConfig = [
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain div").innerHTML = Explain;
+      document.querySelector("explain p").innerHTML = Explain;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
     },
   },
@@ -178,7 +178,7 @@ exports.builderConfig = [
     card: helper.edgeBanned,
     reason: {
       explain:
-        "<p>Request the website owner to investigate their Cloudflare security settings or allow your client IP address. Since the website owner blocked your request, Cloudflare support cannot override a customer's security settings.</p>",
+        "Request the website owner to investigate their Cloudflare security settings or allow your client IP address. Since the website owner blocked your request, Cloudflare support cannot override a customer’s security settings.",
       howtodo:
         "Provide the website owner with a screenshot of the 1006 error message you received.",
     },
@@ -198,7 +198,7 @@ exports.builderConfig = [
     card: helper.edgeBanned,
     reason: {
       explain:
-        "<p>A client or browser is blocked by a Cloudflare customer's Firewall Rules.</p>",
+        "A client or browser is blocked by a Cloudflare customer's Firewall Rules.",
       howtodo:
         "Provide the website owner with a screenshot of the 1020 error message you received.",
     },
@@ -213,7 +213,7 @@ exports.builderConfig = [
     text: "Too Many Requests",
     card: helper.edgeLimit,
     reason: {
-      explain: "<p>Your request rate to the current site is too fast.</p>",
+      explain: "Your request rate to the current site is too fast.",
       howtodo: "Please try again in a few minutes.",
     },
     footer: [

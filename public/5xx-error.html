@@ -77,7 +77,7 @@
         <main>
             What happened?
         </main>
-        <div><p>The web server reported a Server error.</p></div>
+        <p>The web server reported a Server error.</p>
     </explain>
     <howtodo>
         <main>
@@ -140,7 +140,7 @@
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain").innerHTML = `<p>${Explain}</p>`;
+      document.querySelector("explain p").innerText = Explain;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
 
       const utcTime = new Date().toUTCString();

@@ -77,7 +77,7 @@
         <main>
             What happened?
         </main>
-        <div><p>Cloudflare Edge Network reported a error.</p></div>
+        <p>Cloudflare Edge Network reported a error.</p>
     </explain>
     <howtodo>
         <main>
@@ -139,7 +139,7 @@
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain div").innerHTML = Explain;
+      document.querySelector("explain p").innerHTML = Explain;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
     })()
         </script>

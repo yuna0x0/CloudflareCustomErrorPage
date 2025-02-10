@@ -127,7 +127,7 @@ exports.builderConfig = [
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
 
       const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += `Cloudflare Location: ${POP}\n${utcTime}`;
+      document.querySelector("text").innerText += `Hit in ${POP}\n\n${utcTime}`;
     },
   },
   {

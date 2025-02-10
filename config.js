@@ -129,9 +129,7 @@ exports.builderConfig = [
       document.querySelector("header description").innerText = ErrorMessage;
       document.querySelector("explain p").innerText = Explain;
       document.querySelector("text #pop").innerText = POP;
-      document.querySelector(
-        "title"
-      ).innerText = `${ErrorNumber} | ${ErrorMessage}`;
+      document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
     },
   },
   {
@@ -159,8 +157,7 @@ exports.builderConfig = [
       const Explain =
         baseDetils.querySelector("p").innerText +
         document.querySelector("ul").innerText;
-      let ErrorNumber = "5xx";
-      let POP = "undefined";
+      let ErrorNumber = "1xxx";
       baseDetils.querySelector("ul.cferror_details").childNodes.forEach((e) => {
         if (e.innerText !== undefined) {
           let check = e.innerText.replace("Error reference number: ", "");
@@ -168,19 +165,12 @@ exports.builderConfig = [
             ErrorNumber = check;
             return;
           }
-          check = e.innerText.replace("Cloudflare Location: ", "");
-          if (check !== e.innerText) {
-            POP = check;
-            return;
-          }
         }
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
       document.querySelector("explain p").innerText = Explain;
-      document.querySelector(
-        "title"
-      ).innerText = `${ErrorNumber} | ${ErrorMessage}`;
+      document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
     },
   },
   {

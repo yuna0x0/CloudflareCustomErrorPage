@@ -79,7 +79,7 @@ exports.builderConfig = [
     card: helper.allWorking,
     reason: {
       explain:
-        "This is cloudflare-custom-pages, a lightweight custom error page written for Cloudflare that uses ejs as a template compiler. Customized for yuna0x0's infrastructure.",
+        "<p>This is cloudflare-custom-pages, a lightweight custom error page written for Cloudflare that uses ejs as a template compiler. Customized for yuna0x0's infrastructure.</p>",
       howtodo:
         "Check the repo on <a href='https://github.com/yuna0x0/cloudflare-custom-pages'>GitHub</a>.",
     },
@@ -91,7 +91,7 @@ exports.builderConfig = [
     text: "Server-side Error",
     card: helper.ServerError,
     reason: {
-      explain: "The web server reported a Server error.",
+      explain: "<p>The web server reported a Server error.</p>",
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
@@ -136,7 +136,7 @@ exports.builderConfig = [
     text: "Cloudflare-side Error",
     card: helper.edgeError,
     reason: {
-      explain: "Cloudflare Edge Network reported a error.",
+      explain: "<p>Cloudflare Edge Network reported a error.</p>",
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
@@ -178,7 +178,7 @@ exports.builderConfig = [
     card: helper.edgeBanned,
     reason: {
       explain:
-        "Request the website owner to investigate their Cloudflare security settings or allow your client IP address. Since the website owner blocked your request, Cloudflare support cannot override a customer’s security settings.",
+        "<p>Request the website owner to investigate their Cloudflare security settings or allow your client IP address. Since the website owner blocked your request, Cloudflare support cannot override a customer's security settings.</p>",
       howtodo:
         "Provide the website owner with a screenshot of the 1006 error message you received.",
     },
@@ -198,7 +198,7 @@ exports.builderConfig = [
     card: helper.edgeBanned,
     reason: {
       explain:
-        "A client or browser is blocked by a Cloudflare customer's Firewall Rules.",
+        "<p>A client or browser is blocked by a Cloudflare customer's Firewall Rules.</p>",
       howtodo:
         "Provide the website owner with a screenshot of the 1020 error message you received.",
     },
@@ -213,7 +213,7 @@ exports.builderConfig = [
     text: "Too Many Requests",
     card: helper.edgeLimit,
     reason: {
-      explain: "Your request rate to the current site is too fast.",
+      explain: "<p>Your request rate to the current site is too fast.</p>",
       howtodo: "Please try again in a few minutes.",
     },
     footer: [

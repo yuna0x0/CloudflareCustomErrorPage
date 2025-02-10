@@ -3,7 +3,7 @@
 
 <%- include('lib/head'); %>
 <body>
-
+    <% if (config.statusCode) { %>
         <header>
             <main>
                 <%= config.statusCode %>
@@ -12,23 +12,47 @@
                 <%= config.text %>
             </description>
         </header>
+    <% } else { %>
+        <h1>
+            <%= config.text %>
+        </h1>
+    <% } %>
 
-        <% if (config.card) { %>
+    <% if (config.fileName == 'challenge.html') { %>
+        ::CAPTCHA_BOX::
+    <% } %>
+
+    <% if (config.fileName == 'js-challenge.html') { %>
+        ::IM_UNDER_ATTACK_BOX::
+    <% } %>
+
+    <% if (config.card) { %>
         <%- include('lib/card') -%>
-        <% } %>
+    <% } %>
+    <% if (config.reason) { %>
         <%- include('lib/reason') -%>
-        <%- include('lib/waifu') -%>
+    <% } %>
+    <%- include('lib/waifu') -%>
 </body>
 
 <%- include('lib/footer') -%>
 
-<none>
-::CLOUDFLARE_ERROR_1000S_BOX::
-::CLOUDFLARE_ERROR_500S_BOX::
-</none>
+<% if (config.fileName == '1xxx-error.html') { %>
+    <none>
+    ::CLOUDFLARE_ERROR_1000S_BOX::
+    </none>
+<% } %>
 
-<script>
-    (<%- config.script.toString() %>)()
-</script>
+<% if (config.fileName == '5xx-error.html') { %>
+    <none>
+    ::CLOUDFLARE_ERROR_500S_BOX::
+    </none>
+<% } %>
+
+<% if (config.script) { %>
+    <script>
+        (<%- config.script.toString() %>)()
+    </script>
+<% } %>
 
 </html>

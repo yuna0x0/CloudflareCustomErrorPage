@@ -92,6 +92,10 @@ status > card main {
   color: var(--working-with-error-color);
 }
 
+.gray-text {
+  color: gray;
+}
+
 status-text,
 reason p {
   font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

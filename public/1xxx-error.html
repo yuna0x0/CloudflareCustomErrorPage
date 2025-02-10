@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+    
         <header>
             <main>
                 1xxx
@@ -23,25 +23,44 @@
                 Cloudflare-side Error
             </description>
         </header>
+    
 
-        
+    
+
+    
+
+    
         <status>
-    <card class="green-card" id="client-status-card">
-        <icon class="material-icons-outlined green-text">web_assets</icon>
-        <main>Your Client</main>
-        <status-text class="green-text">Working</status-text>
-    </card>
-    <card class="red-card" id="client-status-card">
-        <icon class="material-icons-outlined red-text">cloud</icon>
-        <main>Cloudflare Edge Network</main>
-        <status-text class="red-text">Error</status-text>
-    </card>
-    <card class="yellow-card" id="client-status-card">
-        <icon class="material-icons-outlined yellow-text">dns</icon>
-        <main>Web Server</main>
-        <status-text class="yellow-text">Unknown</status-text>
-    </card>
-</status>        
+    
+        <card class="green-card" id="client-status-card">
+            <icon class="material-icons-outlined green-text">web_assets</icon>
+            <main>Your Client</main>
+            <status-text class="green-text">Working</status-text>
+        </card>
+    
+
+    
+        <card class="red-card" id="client-status-card">
+            <icon class="material-icons-outlined red-text">cloud</icon>
+            
+                <main>Cloudflare Edge Network</main>
+            
+            <status-text class="red-text">Error</status-text>
+        </card>
+    
+
+    
+        <card class="gray-card" id="client-status-card">
+            <icon class="material-icons-outlined gray-text">dns</icon>
+            
+                <main class="gray-text">Web Server</main>
+            
+            <status-text class="gray-text">Unknown</status-text>
+        </card>
+    
+</status>
+    
+    
         <reason>
     <explain>
         <main>
@@ -55,13 +74,14 @@
         </main>
         <p>Please try again in a few minutes.</p>
     </howtodo>
-</reason>        <div class="waifu-img">
+</reason>    
+    <div class="waifu-img">
     <img src="img/neko.webp" width="200px" />
 </div>
 </body>
 
 <footer>
-    <provider>This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> for more information.</provider>
+    <provider>This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> if you need help.</provider>
     <br>
     <text>
         
@@ -73,14 +93,24 @@
         
     </text>
 </footer>
-<none>
-::CLOUDFLARE_ERROR_1000S_BOX::
-::CLOUDFLARE_ERROR_500S_BOX::
-</none>
 
-<script>
-    (function () {
+    <none>
+    ::CLOUDFLARE_ERROR_1000S_BOX::
+    </none>
+
+
+
+
+
+    <script>
+        (function () {
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += utcTime;
+
       const baseDetils = document.querySelector(".cf-error-details");
+      if (!baseDetils) {
+        return;
+      }
       const ErrorMessage = baseDetils.querySelector("h1").innerText;
       const Explain =
         baseDetils.querySelector("p").innerText +
@@ -108,6 +138,7 @@
         "title"
       ).innerText = `${ErrorNumber} | ${ErrorMessage}`;
     })()
-</script>
+    </script>
+
 
 </html>

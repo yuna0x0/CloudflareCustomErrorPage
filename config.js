@@ -38,21 +38,21 @@ const helper = {
     },
     webServer: {
       status: "Unknown",
-      color: "yellow",
+      color: "gray",
     },
   },
   edgeBanned: {
     client: {
-      status: "Working",
-      color: "green",
+      status: "Blocked",
+      color: "red",
     },
     edgeNetwork: {
-      status: "Working",
-      color: "green",
+      status: "Unknown",
+      color: "gray",
     },
     webServer: {
       status: "Unknown",
-      color: "yellow",
+      color: "gray",
     },
   },
   edgeLimit: {
@@ -61,12 +61,12 @@ const helper = {
       color: "red",
     },
     edgeNetwork: {
-      status: "Working",
-      color: "green",
+      status: "Unknown",
+      color: "gray",
     },
     webServer: {
       status: "Unknown",
-      color: "yellow",
+      color: "gray",
     },
   },
 };
@@ -84,10 +84,9 @@ exports.builderConfig = [
         "Check the repo on <a href='https://github.com/yuna0x0/cloudflare-custom-pages'>GitHub</a>.",
     },
     footer: [],
-    script: function () {},
   },
   {
-    fileName: "5xxerror.html",
+    fileName: "5xx-error.html",
     statusCode: "5xx",
     text: "Server-side Error",
     card: helper.ServerError,
@@ -101,7 +100,13 @@ exports.builderConfig = [
       'Hit in <code id="pop"> undefined </code>',
     ],
     script: function () {
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += utcTime;
+
       const baseDetils = document.querySelector(".cf-error-details");
+      if (!baseDetils) {
+        return;
+      }
       const ErrorMessage = baseDetils.querySelector("h1").innerText;
       const Explain = baseDetils.querySelector("p").innerText;
       let ErrorNumber = "5xx";
@@ -130,7 +135,7 @@ exports.builderConfig = [
     },
   },
   {
-    fileName: "1xxxerror.html",
+    fileName: "1xxx-error.html",
     statusCode: "1xxx",
     text: "Cloudflare-side Error",
     card: helper.edgeError,
@@ -143,7 +148,13 @@ exports.builderConfig = [
       "Ray ID is <code>::RAY_ID::</code>",
     ],
     script: function () {
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += utcTime;
+
       const baseDetils = document.querySelector(".cf-error-details");
+      if (!baseDetils) {
+        return;
+      }
       const ErrorMessage = baseDetils.querySelector("h1").innerText;
       const Explain =
         baseDetils.querySelector("p").innerText +
@@ -187,7 +198,10 @@ exports.builderConfig = [
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
-    script: function () {},
+    script: function () {
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += utcTime;
+    },
   },
   {
     fileName: "block-waf.html",
@@ -196,7 +210,7 @@ exports.builderConfig = [
     card: helper.edgeBanned,
     reason: {
       explain:
-        "A client or browser is blocked by a Cloudflare customer’s Firewall Rules.",
+        "A client or browser is blocked by a Cloudflare customer's Firewall Rules.",
       howtodo:
         "Provide the website owner with a screenshot of the 1020 error message you received.",
     },
@@ -204,7 +218,6 @@ exports.builderConfig = [
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
-    script: function () {},
   },
   {
     fileName: "1015.html",
@@ -219,7 +232,24 @@ exports.builderConfig = [
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
-    script: function () {},
+    script: function () {
+      const utcTime = new Date().toUTCString();
+      document.querySelector("text").innerText += utcTime;
+    },
+  },
+  {
+    fileName: "challenge.html",
+    text: "Checking if the site connection is secure...",
+    footer: [
+      "Ray ID is <code>::RAY_ID::</code>",
+    ],
+  },
+  {
+    fileName: "js-challenge.html",
+    text: "Checking if the site connection is secure...",
+    footer: [
+      "Ray ID is <code>::RAY_ID::</code>",
+    ],
   },
 ];
 
@@ -228,7 +258,7 @@ exports.i18n = {
   edgeNetwork: "Cloudflare Edge Network",
   webServer: "Web Server",
   provider:
-    "This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> for more information.",
+    "This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> if you need help.",
   explain: "What happened?",
   howtodo: "What can I do?",
 };

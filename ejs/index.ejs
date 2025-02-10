@@ -13,7 +13,9 @@
             </description>
         </header>
 
+        <% if (config.card) { %>
         <%- include('lib/card') -%>
+        <% } %>
         <%- include('lib/reason') -%>
         <%- include('lib/waifu') -%>
 </body>

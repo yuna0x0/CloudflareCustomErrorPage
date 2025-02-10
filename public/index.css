@@ -160,12 +160,12 @@ reason main {
     max-width: 100%;
   }
 
-  footer {
-    font-size: calc(var(--font-size-description) - 0.2rem);
+  .footer {
+    font-size: calc(var(--font-size-description) - 0.1rem);
   }
 
-  footer > text {
-    font-size: calc(var(--font-size-description) - 0.4rem);
+  .footer > text {
+    font-size: calc(var(--font-size-description) - 0.2rem);
   }
 }
 

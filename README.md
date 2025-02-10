@@ -9,10 +9,12 @@ Demo URL: [cloudflare-custom-pages-32x.pages.dev](https://cloudflare-custom-page
 | Types        | URL                                                     |
 | ------------ | ------------------------------------------------------- |
 | 5XX Error    | <https://cloudflare-custom-pages-32x.pages.dev/5xx-error>  |
-| 10XX Error   | <https://cloudflare-custom-pages-32x.pages.dev/1xxx-error> |
+| 1XXX Error   | <https://cloudflare-custom-pages-32x.pages.dev/1xxx-error> |
 | Rate Limited | <https://cloudflare-custom-pages-32x.pages.dev/1015>      |
 | WAF Block    | <https://cloudflare-custom-pages-32x.pages.dev/block-waf> |
 | IP Banned    | <https://cloudflare-custom-pages-32x.pages.dev/block-ip>  |
+| Challenge (`::CAPTCHA_BOX::`) | <https://cloudflare-custom-pages-32x.pages.dev/challenge>  |
+| JavaScript Challenge (`::IM_UNDER_ATTACK_BOX::`) | <https://cloudflare-custom-pages-32x.pages.dev/js-challenge> |
 
 ## License
 

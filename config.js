@@ -101,7 +101,7 @@ exports.builderConfig = [
     ],
     script: function () {
       const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += utcTime;
+      document.querySelector("text").innerText += `\n${utcTime}`;
 
       const baseDetils = document.querySelector(".cf-error-details");
       if (!baseDetils) {
@@ -147,7 +147,7 @@ exports.builderConfig = [
     ],
     script: function () {
       const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += utcTime;
+      document.querySelector("text").innerText += `\n${utcTime}`;
 
       const baseDetils = document.querySelector(".cf-error-details");
       if (!baseDetils) {
@@ -190,7 +190,7 @@ exports.builderConfig = [
     ],
     script: function () {
       const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += utcTime;
+      document.querySelector("text").innerText += `\n${utcTime}`;
     },
   },
   {
@@ -224,7 +224,7 @@ exports.builderConfig = [
     ],
     script: function () {
       const utcTime = new Date().toUTCString();
-      document.querySelector("text").innerText += utcTime;
+      document.querySelector("text").innerText += `\n${utcTime}`;
     },
   },
   {

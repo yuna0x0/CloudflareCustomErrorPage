@@ -13,8 +13,8 @@ Demo URL: [cloudflare-custom-pages-32x.pages.dev](https://cloudflare-custom-page
 | Rate Limited | <https://cloudflare-custom-pages-32x.pages.dev/1015>      |
 | WAF Block    | <https://cloudflare-custom-pages-32x.pages.dev/block-waf> |
 | IP Banned    | <https://cloudflare-custom-pages-32x.pages.dev/block-ip>  |
-| Challenge (`::CAPTCHA_BOX::`) | <https://cloudflare-custom-pages-32x.pages.dev/challenge>  |
-| JavaScript Challenge (`::IM_UNDER_ATTACK_BOX::`) | <https://cloudflare-custom-pages-32x.pages.dev/js-challenge> |
+| Challenge    | <https://cloudflare-custom-pages-32x.pages.dev/challenge>  |
+| JS Challenge | <https://cloudflare-custom-pages-32x.pages.dev/js-challenge> |
 
 ## License
 

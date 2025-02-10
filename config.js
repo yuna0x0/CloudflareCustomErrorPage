@@ -240,16 +240,12 @@ exports.builderConfig = [
   {
     fileName: "challenge.html",
     text: "Checking if the site connection is secure...",
-    footer: [
-      "Ray ID is <code>::RAY_ID::</code>",
-    ],
+    footer: [],
   },
   {
     fileName: "js-challenge.html",
     text: "Checking if the site connection is secure...",
-    footer: [
-      "Ray ID is <code>::RAY_ID::</code>",
-    ],
+    footer: [],
   },
 ];
 

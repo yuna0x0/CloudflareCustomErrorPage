@@ -134,17 +134,17 @@ reason main {
   font-weight: 550;
 }
 
-footer {
+.footer {
   margin: 1rem;
   color: var(--font-color-lighter);
   font-size: calc(var(--font-size-description) - 0.4rem);
 }
 
-footer > text {
+.footer > text {
   font-size: calc(var(--font-size-description) - 0.6rem);
 }
 
-footer > * {
+.footer > * {
   display: block;
 }
 
@@ -191,6 +191,14 @@ footer > * {
     --error-color-background: #270501;
     --working-with-error-color-background: #392605;
   }
+}
+
+#challenge-running {
+  display: none;
+}
+
+#footer-text {
+  display: none;
 }
 
 .waifu-img {

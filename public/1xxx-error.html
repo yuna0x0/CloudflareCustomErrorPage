@@ -77,15 +77,16 @@
         <main>
             What happened?
         </main>
-        <p>Cloudflare Edge Network reported a error.</p>
+        <div>Cloudflare Edge Network reported a error.</div>
     </explain>
     <howtodo>
         <main>
             What can I do?
         </main>
-        <p>Please try again in a few minutes.</p>
+        <div>Please try again in a few minutes.</div>
     </howtodo>
-</reason>        
+</reason>
+        
         <div class="waifu-img">
     <img src="img/neko.webp" width="200px" />
 </div>
@@ -124,8 +125,8 @@
       }
       const ErrorMessage = baseDetils.querySelector("h1").innerText;
       const Explain =
-        baseDetils.querySelector("p").innerText +
-        document.querySelector("ul").innerText;
+        baseDetils.querySelector("p").innerHTML +
+        baseDetils.querySelector("ul").innerHTML;
       let ErrorNumber = "1xxx";
       baseDetils.querySelector("ul.cferror_details").childNodes.forEach((e) => {
         if (e.innerText !== undefined) {
@@ -138,7 +139,7 @@
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain p").innerText = Explain;
+      document.querySelector("explain div").innerHTML = Explain;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
     })()
         </script>

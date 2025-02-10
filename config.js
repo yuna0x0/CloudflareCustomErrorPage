@@ -123,7 +123,7 @@ exports.builderConfig = [
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain p").innerText = Explain;
+      document.querySelector("explain").innerHTML = `<p>${Explain}</p>`;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
 
       const utcTime = new Date().toUTCString();
@@ -153,8 +153,8 @@ exports.builderConfig = [
       }
       const ErrorMessage = baseDetils.querySelector("h1").innerText;
       const Explain =
-        baseDetils.querySelector("p").innerText +
-        document.querySelector("ul").innerText;
+        baseDetils.querySelector("p").innerHTML +
+        baseDetils.querySelector("ul").innerHTML;
       let ErrorNumber = "1xxx";
       baseDetils.querySelector("ul.cferror_details").childNodes.forEach((e) => {
         if (e.innerText !== undefined) {
@@ -167,7 +167,7 @@ exports.builderConfig = [
       });
       document.querySelector("header main").innerText = ErrorNumber;
       document.querySelector("header description").innerText = ErrorMessage;
-      document.querySelector("explain p").innerText = Explain;
+      document.querySelector("explain div").innerHTML = Explain;
       document.querySelector("title").innerText = `${ErrorNumber} | ${ErrorMessage}`;
     },
   },

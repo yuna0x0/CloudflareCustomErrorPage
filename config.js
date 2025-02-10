@@ -83,9 +83,7 @@ exports.builderConfig = [
       howtodo:
         "Check Our Project on <a href='https://github.com/186526/CloudflareCustomErrorPage'>GitHub</a>.",
     },
-    footer: [
-      'From the <a href="https://github.com/186526/CloudflareCustomErrorPage">186526/CloudflareCustomErrorPage</a> project.',
-    ],
+    footer: [],
     script: function () {},
   },
   {
@@ -98,7 +96,6 @@ exports.builderConfig = [
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
-      'From the <a href="https://github.com/186526/CloudflareCustomErrorPage">186526/CloudflareCustomErrorPage</a> project.',
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
       'Hit in <code id="pop"> undefined </code>',
@@ -142,7 +139,6 @@ exports.builderConfig = [
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
-      'From the <a href="https://github.com/186526/CloudflareCustomErrorPage">186526/CloudflareCustomErrorPage</a> project.',
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
@@ -188,7 +184,6 @@ exports.builderConfig = [
         "Provide the website owner with a screenshot of the 1006 error message you received.",
     },
     footer: [
-      'From the <a href="https://github.com/186526/CloudflareCustomErrorPage">186526/CloudflareCustomErrorPage</a> project.',
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
@@ -206,7 +201,6 @@ exports.builderConfig = [
         "Provide the website owner with a screenshot of the 1020 error message you received.",
     },
     footer: [
-      'From the <a href="https://github.com/186526/CloudflareCustomErrorPage">186526/CloudflareCustomErrorPage</a> project.',
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
@@ -222,7 +216,6 @@ exports.builderConfig = [
       howtodo: "Please try again in a few minutes.",
     },
     footer: [
-      'From the <a href="https://github.com/186526/CloudflareCustomErrorPage">186526/CloudflareCustomErrorPage</a> project.',
       "Your IP is <code> ::CLIENT_IP:: </code>",
       "Ray ID is <code>::RAY_ID::</code>",
     ],
@@ -235,7 +228,7 @@ exports.i18n = {
   edgeNetwork: "Cloudflare Edge Network",
   webServer: "Web Server",
   provider:
-    "Running with <a href='https://cloudflare.com'>Cloudflare</a>.",
+    "This website is using yuna0x0's infrastructure with <a href='https://www.cloudflare.com'>Cloudflare</a>.<br>Contact <a href='https://yuna0x0.com'>yuna0x0</a> for more information.",
   explain: "What happened?",
   howtodo: "What can I do?",
 };

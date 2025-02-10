@@ -1,7 +1,11 @@
 <status>
     <% if (config.card.client) { %>
         <card class="<%= config.card.client.color %>-card" id="client-status-card">
-            <icon class="material-icons-outlined <%= config.card.client.color %>-text" style="position: relative;">web_assets</icon>
+            <icon class="material-icons-outlined <%= config.card.client.color %>-text" style="position: relative;">web_asset
+                <% if (config.card.client.color === 'red') { %>
+                    <span class="material-icons-outlined error-icon">error</span>
+                <% } %>
+            </icon>
             <main><%= i18n.client %></main>
             <status-text class="<%= config.card.client.color %>-text"><%= config.card.client.status %></status-text>
         </card>

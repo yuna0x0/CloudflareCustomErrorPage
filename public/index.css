@@ -217,7 +217,7 @@ reason main {
 
 .error-icon {
   position: absolute;
-  bottom: -5px;
+  bottom: -3px;
   right: -5px;
   font-size: 24px;
   background: var(--error-color-background);

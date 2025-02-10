@@ -79,9 +79,9 @@ exports.builderConfig = [
     card: helper.allWorking,
     reason: {
       explain:
-        "This is CloudflareCustomErrorPage, a lightweight custom error page written for Cloudflare that uses ejs as a template compiler.",
+        "This is yuna0x0/cloudflare-custom-pages, a lightweight custom error page written for Cloudflare that uses ejs as a template compiler. Customized for yuna0x0's infrastructure.",
       howtodo:
-        "Check Our Project on <a href='https://github.com/186526/CloudflareCustomErrorPage'>GitHub</a>.",
+        "Check the repo on <a href='https://github.com/186526/CloudflareCustomErrorPage'>GitHub</a>.",
     },
     footer: [],
     script: function () {},

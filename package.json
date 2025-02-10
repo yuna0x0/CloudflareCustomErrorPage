@@ -4,9 +4,9 @@
   "description": "Lightweight custom error page written for Cloudflare.",
   "main": "app.js",
   "repository": {
-		"type": "git",
-		"url": "git+https://github.com/yuna0x0/cloudflare-custom-pages.git"
-	},
+    "type": "git",
+    "url": "git+https://github.com/yuna0x0/cloudflare-custom-pages.git"
+  },
   "contributors": [
     "186526 <i@186526.xyz>",
     "yuna0x0 <yuna@yuna0x0.com>"
@@ -14,10 +14,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "start": "http-server",
     "build": "node app.js"
   },
   "devDependencies": {
-    "ejs": "^3.1.10"
+    "ejs": "^3.1.10",
+    "http-server": "^14.1.1"
   },
   "packageManager": "pnpm@10.2.1+sha512.398035c7bd696d0ba0b10a688ed558285329d27ea994804a52bad9167d8e3a72bcb993f9699585d3ca25779ac64949ef422757a6c31102c12ab932e5cbe5cc92"
 }

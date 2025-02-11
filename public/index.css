@@ -212,6 +212,7 @@ reason main {
   margin-top: 75px;
   @media (max-width: 1024px) {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
